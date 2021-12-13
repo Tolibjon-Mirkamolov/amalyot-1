@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Buenard:wght@700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nanum+Gothic+Coding:wght@400;700&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,700&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Buenard:wght@700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nanum+Gothic+Coding:wght@400;700&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,700&family=Roboto:wght@300&display=swap"
         rel="stylesheet">
     <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="stylesheet" href="./boot/bootstrap.css" />
+    <!-- <link rel="stylesheet" href="./boot/bootstrap.css" /> -->
     <link rel="stylesheet" type="" href="./node_modules/font-awesome/css/font-awesome.min.css">
-
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/slick.css" />
     <link rel="stylesheet" href="css/jquery.fancybox.css" />
@@ -26,143 +28,164 @@
 
     <div class="wrapper">
         <header class="header">
-            <nav class="navigation">
+            <div class="nav__list">
+
                 <div class="container">
                     <div class="nav__inner">
-                        <div class="nav__logo">
-                            <a href="#" class="logo__link">
-                                <img class="logo__img" src="./images/logo.png" alt="">
-                            </a>
-                        </div>
-                        <div class="nav__menu">
-                            <ul class="nav__menu-list">
-                                <li class="nav__menu-item">
-                                    <a class="nav__menu-link" href="#">Home</a>
-                                </li>
-                                <li class="nav__menu-item">
-                                    <a class="nav__menu-link" href="#">Product</a>
-                                </li>
-                                <li class="nav__menu-item">
-                                    <a class="nav__menu-link" href="#">Faq</a>
-                                </li>
-                                <li class="nav__menu-item">
-                                    <a class="nav__menu-link" href="#">Contact</a>
-                                </li>
-                            </ul>
+                        <a class="adress__link" href="">
+                            <i class="fa fa-map-marker adress__link-icon" aria-hidden="true"></i> Москва и облость
+                        </a>
+                        <ul class="nav__list-menu">
+                            <li class="nav__list-item">
+                                <a class="nav__list-link" href="#">Новости</a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a class="nav__list-link" href="#">Контакты</a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a class="nav__list-link" href="#">Вопрос ответ</a>
+                            </li>
+                        </ul>
+                        <a class="phone__link" href="#">
+                            <i class="fa fa-phone phone__link-icon__phone" aria-hidden="true"></i>
+                            <span class="phone__link-span">+7 123 456-78-90</span> (c 05:00 до 00:00)
+                        </a>
+                    </div>
+                    <div class="nav__tools">
+                        <div class="container">
+                            <div class="nav__bar">
+                                <a class="nav__logo" href="#">
+                                    <img class="nav__logo-img" src="./images/logo.png" alt="">
+                                </a>
+                                <button class="nav__all-catalog">
+Каталог
+                                </button>
+                                <form class="nav__form">
+                                    <input class="nav__input" placeholder="Что вы ищите?">
+                                    <button class="nav__inp-btn" type="">
+                                      <i class="fa fa-search input__search-icon" aria-hidden="true"></i>
+                                    </button>
+                                </form>
+                                <div class="nav__user">
+                                    <a class="nav__user-link" href="#">
+                                        <i class="fa fa-user-circle-o nav__user-icon" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="nav__user-link" href="#">
+                                        <i class="fa fa-star nav__user-icon" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="nav__user-link for__brf" href="#">
+                                        <i class="fa fa-shopping-cart nav__user-icon shop__before-one" aria-hidden="true"></i>
+                                        <span class="shop__before">
+                                          1
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </nav>
-            <div class="header__container">
-                <div class="header__container-txt">
-                    <p class="header__container-title">
-                        Food app
-                    </p>
-                    <p class="header__container-text">
-                        Why stay hungry when <br> you can order form Bella Onojie
-                    </p>
-                    <p class="header__container-app">
-                        Download the bella onoje’s food app now on
-                    </p>
-                    <div class="get__app">
-                        <button class="get__app-link">Playstore</button>
-                        <button class="get__app-link">App store</button>
+                    <div class="header__content">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper header__content-swiper">
+                                <div class="swiper-slide swiper__item">
+                                    <div class="slide__item-txt">
+                                        <p class="slide__item-title">Большие скидки на все наши товары</p>
+                                        <p class="slide__item-text">Ударная волна воспроизводима в лабораторных условиях. Силовое поле конфокально растягивает квантовый эксимер. Резонатор восстанавливает векторный осциллятор. Если для простоты пренебречь.</p>
+                                        <button class="slide__item-btn" type="">В каталог
+                                          <i class="fa fa-long-arrow-right slide__item-btn__icon" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <div class="slide__item-liner">
+
+                                    </div>
+                                    <div class="slide__item-img">
+
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper__item">
+                                    <div class="slide__item-txt">
+                                        <p class="slide__item-title">Большие скидки на все наши товары</p>
+                                        <p class="slide__item-text">Ударная волна воспроизводима в лабораторных условиях. Силовое поле конфокально растягивает квантовый эксимер. Резонатор восстанавливает векторный осциллятор. Если для простоты пренебречь.</p>
+                                        <button class="slide__item-btn" type="">В каталог
+                                          <i class="fa fa-long-arrow-right slide__item-btn__icon" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <div class="slide__item-liner">
+
+                                    </div>
+                                    <div class="slide__item-img">
+
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper__item">
+                                    <div class="slide__item-txt">
+                                        <p class="slide__item-title">Большие скидки на все наши товары</p>
+                                        <p class="slide__item-text">Ударная волна воспроизводима в лабораторных условиях. Силовое поле конфокально растягивает квантовый эксимер. Резонатор восстанавливает векторный осциллятор. Если для простоты пренебречь.</p>
+                                        <button class="slide__item-btn" type="">В каталог
+                                          <i class="fa fa-long-arrow-right slide__item-btn__icon" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <div class="slide__item-liner">
+
+                                    </div>
+                                    <div class="slide__item-img">
+
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper__item">
+                                    <div class="slide__item-txt">
+                                        <p class="slide__item-title">Большие скидки на все наши товары</p>
+                                        <p class="slide__item-text">Ударная волна воспроизводима в лабораторных условиях. Силовое поле конфокально растягивает квантовый эксимер. Резонатор восстанавливает векторный осциллятор. Если для простоты пренебречь.</p>
+                                        <button class="slide__item-btn" type="">В каталог
+                                          <i class="fa fa-long-arrow-right slide__item-btn__icon" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <div class="slide__item-liner">
+
+                                    </div>
+                                    <div class="slide__item-img">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+
+                        <div class="all__nav">
+
+                            <div class="all__nav-item">
+                                <a class="all__nav-link" href="#">
+                                    <img class="all__nav-img" src="./images/items__all-1.png" alt="">
+                                </a>
+                                <p class="all__nav-text">Подарочные наборы</p>
+                            </div>
+                            <div class="all__nav-item">
+                                <a class="all__nav-link" href="#">
+                                    <img class="all__nav-img" src="./images/items__all-2.png" alt="">
+                                </a>
+                                <p class="all__nav-text">Подарочные наборы</p>
+                            </div>
+                            <div class="all__nav-item">
+                                <a class="all__nav-link" href="#">
+                                    <img class="all__nav-img" src="./images/items__all-3.png" alt="">
+                                </a>
+                                <p class="all__nav-text">Подарочные наборы</p>
+                            </div>
+                            <div class="all__nav-item">
+                                <a class="all__nav-link" href="#">
+                                    <img class="all__nav-img" src="./images/items__all-4.png" alt="">
+                                </a>
+                                <p class="all__nav-text">Подарочные наборы</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
-        <section class="sec-1">
-            <div class="container">
-                <div class="app__phone">
-                    <div class="phone__img-blog">
-                        <img class="phone ph-1" src="./images/phone-1.png" alt="">
-                    </div>
-                    <div class="phone__img-blog">
-                        <img class="phone ph-2" src="./images/phone-2.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="sec-2">
-            <div class="container">
-                <p class="app__works">
-                    How the app works
-                </p>
-                <div class="work__inner">
-                    <div class="work__item-img">
-                        <img class="item-img" src="./images/phone-1.png" alt="">
-                    </div>
-                    <div class="work__item-txt">
-                        <p class="work__item-title">Create an account</p>
-                        <p class="work__item-title-2">Create/login to an existing <br> account to get started</p>
-                        <p class="work__item-text">An account is created with your email <br> and a desired password</p>
-                    </div>
-                </div>
-                <div class="work__inner">
-                    <div class="work__item-txt">
-                        <p class="work__item-title">Create an account</p>
-                        <p class="work__item-title-2">Create/login to an existing <br> account to get started</p>
-                        <p class="work__item-text">An account is created with your email <br> and a desired password</p>
-                    </div>
-                    <div class="work__item-img">
-                        <img class="item-imgs" src="./images/phone-2.png" alt="">
-                    </div>
-                </div>
-                <div class="work__inner">
-                    <div class="work__item-img">
-                        <img class="item-img" src="./images/phone-1.png" alt="">
-                    </div>
-                    <div class="work__item-txt">
-                        <p class="work__item-title">Create an account</p>
-                        <p class="work__item-title-2">Create/login to an existing <br> account to get started</p>
-                        <p class="work__item-text">An account is created with your email <br> and a desired password</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="sec-3">
-            <div class="container">
-                <div class="header__container-txt">
-
-                    <p class="header__container-text">
-                        Download the app now.
-                    </p>
-                    <p class="header__container-app">
-                        Available on your favorite store. Start your premium experience now
-                    </p>
-                    <div class="get__app">
-                        <button class="get__app-link">Playstore</button>
-                        <button class="get__app-link">App store</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <footer class="footer">
-            <div class="container">
-                <div class="footer__inner">
-                    <a class="logo__brend-link" href="#">
-                        <img class="logo__brend-img" src="./images/logo.png" alt="">
-                    </a>
-                    <div class="social">
-                        <a class="social__link" href="#">
-                            <img class="social__img" src="./images/social.svg" alt="">
-                        </a>
-                        <a class="social__link" href="#">
-                            <img class="social__img" src="./images/social-2.svg" alt="">
-                        </a>
-                        <a class="social__link" href="#">
-                            <img class="social__img" src="./images/social-3.svg" alt="">
-                        </a>
-                    </div>
-                    <p class="footer__text">
-                        Copywright 2020 Bella Onojie.com
-                    </p>
-                </div>
-            </div>
-        </footer>
     </div>
 
-
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
